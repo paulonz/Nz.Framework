@@ -1,0 +1,465 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Resources", "01 - Resources", "{A07011BC-7203-41AD-891D-0EE70988C9BA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Resources\Nz.ico = Resources\Nz.ico
+		Resources\Nz.postman_collection.json = Resources\Nz.postman_collection.json
+		Resources\Nz.snk = Resources\Nz.snk
+		Resources\TODO.txt = Resources\TODO.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Src", "02 - Src", "{EC34AD7E-430B-4FD2-BEC4-4CB5679DF139}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Common", "01 - Common", "{B26B9DE2-8EA4-4198-B132-3AAC9EAF716C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Libs", "02 - Libs", "{CFC76E70-2C0F-42B6-B25E-D131DC9FF5C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Core", "03 - Core", "{92642C77-5979-454E-A289-10975293A705}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Api", "04 - Api", "{47EF40C7-B3AE-4DD0-B357-43E2C41E1CFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Encryption", "01 - Encryption", "{9D0A6DD1-06FD-47F0-891B-2B8768FC0DEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Libs.Encryption", "Src\Libs\Encryption\Nz.Libs.Encryption\Nz.Libs.Encryption.csproj", "{381CFB36-DA05-4D0C-B57E-161B04192587}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Libs.Encryption.Impl.HashAlgorithm", "Src\Libs\Encryption\Nz.Libs.Encryption.Impl.HashAlgorithm\Nz.Libs.Encryption.Impl.HashAlgorithm.csproj", "{90DACB1C-E9BE-4BCF-ACBA-BD361ED8F47E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Common.GeneralSettings", "Src\Common\Nz.Common.GeneralSettings\Nz.Common.GeneralSettings.csproj", "{2C0B6F15-4C73-4493-975C-F7657EC6BA38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Common.GeneralSettings.Impl.Default", "Src\Common\Nz.Common.GeneralSettings.Impl.Default\Nz.Common.GeneralSettings.Impl.Default.csproj", "{0FBC949A-406B-49E1-B360-112CAF098CDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Common.Helpers", "Src\Common\Nz.Common.Helpers\Nz.Common.Helpers.csproj", "{3D715D02-0EE3-4B0C-B51D-F4AF650E5B52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Model", "01 - Model", "{09747B7B-B781-4B46-B677-3641E9971C12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.Model", "Src\Core\Model\Nz.Core.Model\Nz.Core.Model.csproj", "{8C082344-5479-4A26-9BB0-BBD9FD9AA886}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - DatabaseContext", "02 - DatabaseContext", "{A4611B58-AE8A-4E80-9A31-B363CD77D959}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.DatabaseContext", "Src\Core\DatabaseContext\Nz.Core.DatabaseContext\Nz.Core.DatabaseContext.csproj", "{89189D59-5FC9-48D4-A7FF-DA0BBECA7206}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - UnitOfWork", "03 - UnitOfWork", "{25DE6CCA-05FC-44D4-B8B0-A024DA6FD18C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.UnitOfWork", "Src\Core\UnitOfWork\Nz.Core.UnitOfWork\Nz.Core.UnitOfWork.csproj", "{69FA0994-8620-48F4-BE1A-3A5AEC3597AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.UnitOfWork.Impl.Postgresql", "Src\Core\UnitOfWork\Nz.Core.UnitOfWork.Impl.Postgresql\Nz.Core.UnitOfWork.Impl.Postgresql.csproj", "{93DDFB7B-E2BA-40F5-9143-FD57C72C86B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Business", "04 - Business", "{7919C684-FEDE-4F2A-A681-C5DAFE0B3F69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.Business", "Src\Core\Business\Nz.Core.Business\Nz.Core.Business.csproj", "{4EAD6FE4-D9A5-4752-B465-0D8CF0B1D733}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.Business.Impl.Default", "Src\Core\Business\Nz.Core.Business.Impl.Default\Nz.Core.Business.Impl.Default.csproj", "{D357B997-E9F5-401F-A0CB-354486F7AA1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Backend", "01 - Backend", "{37E0643E-4CF3-4252-830F-9812FB92ECB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Api.ViewModel", "Src\Api\Nz.Api.ViewModel\Nz.Api.ViewModel.csproj", "{B81DD61A-DA7B-43B2-8D50-0695A267159A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Service", "05 - Service", "{E71812B8-199C-4B8E-BD8E-8788704FE8AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.Service", "Src\Core\Service\Nz.Core.Service\Nz.Core.Service.csproj", "{C530BF97-130E-4C27-A02B-028B157D0C91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.Service.Impl.Default", "Src\Core\Service\Nz.Core.Service.Impl.Default\Nz.Core.Service.Impl.Default.csproj", "{36B342EF-7053-4CCB-B9E9-B0F7EB7781E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Jwt", "02 - Jwt", "{AF529159-7E04-46E1-8E41-F66011E5BD83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Libs.Jwt.Settings", "Src\Libs\Jwt\Nz.Libs.Jwt.Settings\Nz.Libs.Jwt.Settings.csproj", "{80ECD31F-7921-4B49-9519-718B63E4AF8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Libs.Jwt.Settings.Impl.Default", "Src\Libs\Jwt\Nz.Libs.Jwt.Settings.Impl.Default\Nz.Libs.Jwt.Settings.Impl.Default.csproj", "{71AE831A-5A2C-4C28-997F-04BDFB5C2058}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Api", "Src\Api\Nz.Api\Nz.Api.csproj", "{7E722201-99E3-4993-8E59-0751DF5993FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - EmailSender", "03 - EmailSender", "{795F1B8E-2A18-4A3C-B6BD-DF83A4F8E084}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - MessageTemplate", "04 - MessageTemplate", "{15E1332D-5C6B-4E05-A4C6-8875530B61F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Libs.MessageTemplate", "Src\Libs\MessageTemplate\Nz.Libs.MessageTemplate\Nz.Libs.MessageTemplate.csproj", "{34DD430D-AC30-4231-99A1-9D6EE1AF6195}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Libs.MessageTemplate.Impl.MessageResource", "Src\Libs\MessageTemplate\Nz.Libs.MessageTemplate.Impl.MessageResource\Nz.Libs.MessageTemplate.Impl.MessageResource.csproj", "{8F47B7E2-775C-41FC-8779-045D54923E83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Libs.EmailSender", "Src\Libs\EmailSender\Nz.Libs.EmailSender\Nz.Libs.EmailSender.csproj", "{290CCB16-3702-4DB1-B86C-B90B323308BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Libs.EmailSender.Impl.Smtp", "Src\Libs\EmailSender\Nz.Libs.EmailSender.Impl.Smtp\Nz.Libs.EmailSender.Impl.Smtp.csproj", "{425868FE-077C-4805-8A50-734C923EAA6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.Model.Impl.Jwt", "Src\Core\Model\Nz.Core.Model.Impl.Jwt\Nz.Core.Model.Impl.Jwt.csproj", "{C9F9BA40-D2A4-4AF1-AFA2-B9B0C47F37DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - RestPagination", "05 - RestPagination", "{70E013E1-44A0-4188-AFE5-6B0EEE976DB9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Libs.RestPagination", "Src\Libs\RestPagination\Nz.Libs.RestPagination\Nz.Libs.RestPagination.csproj", "{3D8ACB51-84BF-4C8A-8CB7-413E790ABE9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{C46466D8-F1AA-496A-AA47-DCFDFEF641BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{FC90C086-5060-452E-A98F-363A8EEA4A19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{9CF50C71-56EA-4B60-9D81-ED95602690DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{D0EC21ED-5B2D-4556-94CA-3FD5A985ADF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{7A2EFC80-C5C0-4392-9347-121751E3596E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{9F7FBC80-96B3-457F-85E2-B32ED4BD5493}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{24A336A6-03AF-49CF-8E29-12999AAD88EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{678F2E99-4027-4A0C-A82D-6EE7270D43FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{F72B0F75-82F0-4279-BFC9-B8F578716D82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Impl", "Impl", "{64131A36-771B-42D8-83A5-477DF64085C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Tests", "03 - Tests", "{D514F4BC-3915-4625-9AC6-B41F22BAC4BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Common.Helpers.Impl.Default", "Src\Common\Nz.Common.Helpers.Impl.Default\Nz.Common.Helpers.Impl.Default.csproj", "{F401F0F0-8AB5-451B-A38A-D4FFF304FC0F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.Model.Impl.Auth", "Src\Core\Model\Nz.Core.Model.Impl.Auth\Nz.Core.Model.Impl.Auth.csproj", "{2F8D1396-38FC-4BE7-9344-0F1988E8F2B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.DatabaseContext.Impl.Auth", "Src\Core\DatabaseContext\Nz.Core.DatabaseContext.Impl.Auth\Nz.Core.DatabaseContext.Impl.Auth.csproj", "{27CD1308-F891-4640-B480-09E5CAF457BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.Business.Impl.Auth", "Src\Core\Business\Nz.Core.Business.Impl.Auth\Nz.Core.Business.Impl.Auth.csproj", "{D780B051-1770-4E23-B744-C7FF77DE91F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Core.Service.Impl.Auth", "Src\Core\Service\Nz.Core.Service.Impl.Auth\Nz.Core.Service.Impl.Auth.csproj", "{141A4A40-8FAB-4454-8418-279EB0CF3F0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Api.ViewModel.Auth", "Src\Api\Auth\Nz.Api.ViewModel.Auth\Nz.Api.ViewModel.Auth.csproj", "{D4F00EFC-35CC-4392-93D1-6E4C1FF55EE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Auth", "02 - Auth", "{3195CC8A-12BB-4E54-9826-9EAF13871333}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Common", "01 - Common", "{7BC57D63-D0B1-4686-ACB9-681750B06631}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Api.Auth", "Src\Api\Auth\Nz.Api.Auth\Nz.Api.Auth.csproj", "{54DF3399-D56E-4D5C-9ADB-D3AC64A00A19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Auth", "01 - Auth", "{E194C996-8C6C-4B75-83CA-ECDCC912AC6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nz.Tests.Auth", "Src\Tests\Nz.Tests.Auth\Nz.Tests.Auth.csproj", "{16BF98F1-537A-4596-B7FC-D54FE5C76FED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{381CFB36-DA05-4D0C-B57E-161B04192587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381CFB36-DA05-4D0C-B57E-161B04192587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381CFB36-DA05-4D0C-B57E-161B04192587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381CFB36-DA05-4D0C-B57E-161B04192587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90DACB1C-E9BE-4BCF-ACBA-BD361ED8F47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DACB1C-E9BE-4BCF-ACBA-BD361ED8F47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DACB1C-E9BE-4BCF-ACBA-BD361ED8F47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DACB1C-E9BE-4BCF-ACBA-BD361ED8F47E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0B6F15-4C73-4493-975C-F7657EC6BA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0B6F15-4C73-4493-975C-F7657EC6BA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0B6F15-4C73-4493-975C-F7657EC6BA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0B6F15-4C73-4493-975C-F7657EC6BA38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBC949A-406B-49E1-B360-112CAF098CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBC949A-406B-49E1-B360-112CAF098CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBC949A-406B-49E1-B360-112CAF098CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBC949A-406B-49E1-B360-112CAF098CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D715D02-0EE3-4B0C-B51D-F4AF650E5B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D715D02-0EE3-4B0C-B51D-F4AF650E5B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D715D02-0EE3-4B0C-B51D-F4AF650E5B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D715D02-0EE3-4B0C-B51D-F4AF650E5B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C082344-5479-4A26-9BB0-BBD9FD9AA886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C082344-5479-4A26-9BB0-BBD9FD9AA886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C082344-5479-4A26-9BB0-BBD9FD9AA886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C082344-5479-4A26-9BB0-BBD9FD9AA886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89189D59-5FC9-48D4-A7FF-DA0BBECA7206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89189D59-5FC9-48D4-A7FF-DA0BBECA7206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89189D59-5FC9-48D4-A7FF-DA0BBECA7206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89189D59-5FC9-48D4-A7FF-DA0BBECA7206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69FA0994-8620-48F4-BE1A-3A5AEC3597AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69FA0994-8620-48F4-BE1A-3A5AEC3597AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69FA0994-8620-48F4-BE1A-3A5AEC3597AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69FA0994-8620-48F4-BE1A-3A5AEC3597AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93DDFB7B-E2BA-40F5-9143-FD57C72C86B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93DDFB7B-E2BA-40F5-9143-FD57C72C86B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93DDFB7B-E2BA-40F5-9143-FD57C72C86B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93DDFB7B-E2BA-40F5-9143-FD57C72C86B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EAD6FE4-D9A5-4752-B465-0D8CF0B1D733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAD6FE4-D9A5-4752-B465-0D8CF0B1D733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAD6FE4-D9A5-4752-B465-0D8CF0B1D733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAD6FE4-D9A5-4752-B465-0D8CF0B1D733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D357B997-E9F5-401F-A0CB-354486F7AA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D357B997-E9F5-401F-A0CB-354486F7AA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D357B997-E9F5-401F-A0CB-354486F7AA1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D357B997-E9F5-401F-A0CB-354486F7AA1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81DD61A-DA7B-43B2-8D50-0695A267159A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81DD61A-DA7B-43B2-8D50-0695A267159A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81DD61A-DA7B-43B2-8D50-0695A267159A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81DD61A-DA7B-43B2-8D50-0695A267159A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C530BF97-130E-4C27-A02B-028B157D0C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C530BF97-130E-4C27-A02B-028B157D0C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C530BF97-130E-4C27-A02B-028B157D0C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C530BF97-130E-4C27-A02B-028B157D0C91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B342EF-7053-4CCB-B9E9-B0F7EB7781E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B342EF-7053-4CCB-B9E9-B0F7EB7781E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B342EF-7053-4CCB-B9E9-B0F7EB7781E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B342EF-7053-4CCB-B9E9-B0F7EB7781E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80ECD31F-7921-4B49-9519-718B63E4AF8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80ECD31F-7921-4B49-9519-718B63E4AF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80ECD31F-7921-4B49-9519-718B63E4AF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80ECD31F-7921-4B49-9519-718B63E4AF8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71AE831A-5A2C-4C28-997F-04BDFB5C2058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71AE831A-5A2C-4C28-997F-04BDFB5C2058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71AE831A-5A2C-4C28-997F-04BDFB5C2058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71AE831A-5A2C-4C28-997F-04BDFB5C2058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E722201-99E3-4993-8E59-0751DF5993FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E722201-99E3-4993-8E59-0751DF5993FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E722201-99E3-4993-8E59-0751DF5993FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E722201-99E3-4993-8E59-0751DF5993FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34DD430D-AC30-4231-99A1-9D6EE1AF6195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34DD430D-AC30-4231-99A1-9D6EE1AF6195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34DD430D-AC30-4231-99A1-9D6EE1AF6195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34DD430D-AC30-4231-99A1-9D6EE1AF6195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F47B7E2-775C-41FC-8779-045D54923E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F47B7E2-775C-41FC-8779-045D54923E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F47B7E2-775C-41FC-8779-045D54923E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F47B7E2-775C-41FC-8779-045D54923E83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{290CCB16-3702-4DB1-B86C-B90B323308BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{290CCB16-3702-4DB1-B86C-B90B323308BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{290CCB16-3702-4DB1-B86C-B90B323308BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{290CCB16-3702-4DB1-B86C-B90B323308BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{425868FE-077C-4805-8A50-734C923EAA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425868FE-077C-4805-8A50-734C923EAA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425868FE-077C-4805-8A50-734C923EAA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425868FE-077C-4805-8A50-734C923EAA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F9BA40-D2A4-4AF1-AFA2-B9B0C47F37DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F9BA40-D2A4-4AF1-AFA2-B9B0C47F37DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F9BA40-D2A4-4AF1-AFA2-B9B0C47F37DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F9BA40-D2A4-4AF1-AFA2-B9B0C47F37DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8ACB51-84BF-4C8A-8CB7-413E790ABE9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8ACB51-84BF-4C8A-8CB7-413E790ABE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8ACB51-84BF-4C8A-8CB7-413E790ABE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8ACB51-84BF-4C8A-8CB7-413E790ABE9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F401F0F0-8AB5-451B-A38A-D4FFF304FC0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F401F0F0-8AB5-451B-A38A-D4FFF304FC0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F401F0F0-8AB5-451B-A38A-D4FFF304FC0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F401F0F0-8AB5-451B-A38A-D4FFF304FC0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F8D1396-38FC-4BE7-9344-0F1988E8F2B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F8D1396-38FC-4BE7-9344-0F1988E8F2B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F8D1396-38FC-4BE7-9344-0F1988E8F2B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F8D1396-38FC-4BE7-9344-0F1988E8F2B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CD1308-F891-4640-B480-09E5CAF457BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CD1308-F891-4640-B480-09E5CAF457BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CD1308-F891-4640-B480-09E5CAF457BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CD1308-F891-4640-B480-09E5CAF457BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D780B051-1770-4E23-B744-C7FF77DE91F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D780B051-1770-4E23-B744-C7FF77DE91F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D780B051-1770-4E23-B744-C7FF77DE91F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D780B051-1770-4E23-B744-C7FF77DE91F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{141A4A40-8FAB-4454-8418-279EB0CF3F0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141A4A40-8FAB-4454-8418-279EB0CF3F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141A4A40-8FAB-4454-8418-279EB0CF3F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141A4A40-8FAB-4454-8418-279EB0CF3F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F00EFC-35CC-4392-93D1-6E4C1FF55EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F00EFC-35CC-4392-93D1-6E4C1FF55EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F00EFC-35CC-4392-93D1-6E4C1FF55EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F00EFC-35CC-4392-93D1-6E4C1FF55EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54DF3399-D56E-4D5C-9ADB-D3AC64A00A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54DF3399-D56E-4D5C-9ADB-D3AC64A00A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54DF3399-D56E-4D5C-9ADB-D3AC64A00A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54DF3399-D56E-4D5C-9ADB-D3AC64A00A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16BF98F1-537A-4596-B7FC-D54FE5C76FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16BF98F1-537A-4596-B7FC-D54FE5C76FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16BF98F1-537A-4596-B7FC-D54FE5C76FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16BF98F1-537A-4596-B7FC-D54FE5C76FED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B26B9DE2-8EA4-4198-B132-3AAC9EAF716C} = {37E0643E-4CF3-4252-830F-9812FB92ECB3}
+		{CFC76E70-2C0F-42B6-B25E-D131DC9FF5C5} = {37E0643E-4CF3-4252-830F-9812FB92ECB3}
+		{92642C77-5979-454E-A289-10975293A705} = {37E0643E-4CF3-4252-830F-9812FB92ECB3}
+		{47EF40C7-B3AE-4DD0-B357-43E2C41E1CFA} = {37E0643E-4CF3-4252-830F-9812FB92ECB3}
+		{9D0A6DD1-06FD-47F0-891B-2B8768FC0DEC} = {CFC76E70-2C0F-42B6-B25E-D131DC9FF5C5}
+		{381CFB36-DA05-4D0C-B57E-161B04192587} = {9D0A6DD1-06FD-47F0-891B-2B8768FC0DEC}
+		{90DACB1C-E9BE-4BCF-ACBA-BD361ED8F47E} = {FC90C086-5060-452E-A98F-363A8EEA4A19}
+		{2C0B6F15-4C73-4493-975C-F7657EC6BA38} = {B26B9DE2-8EA4-4198-B132-3AAC9EAF716C}
+		{0FBC949A-406B-49E1-B360-112CAF098CDF} = {C46466D8-F1AA-496A-AA47-DCFDFEF641BE}
+		{3D715D02-0EE3-4B0C-B51D-F4AF650E5B52} = {B26B9DE2-8EA4-4198-B132-3AAC9EAF716C}
+		{09747B7B-B781-4B46-B677-3641E9971C12} = {92642C77-5979-454E-A289-10975293A705}
+		{8C082344-5479-4A26-9BB0-BBD9FD9AA886} = {09747B7B-B781-4B46-B677-3641E9971C12}
+		{A4611B58-AE8A-4E80-9A31-B363CD77D959} = {92642C77-5979-454E-A289-10975293A705}
+		{89189D59-5FC9-48D4-A7FF-DA0BBECA7206} = {A4611B58-AE8A-4E80-9A31-B363CD77D959}
+		{25DE6CCA-05FC-44D4-B8B0-A024DA6FD18C} = {92642C77-5979-454E-A289-10975293A705}
+		{69FA0994-8620-48F4-BE1A-3A5AEC3597AF} = {25DE6CCA-05FC-44D4-B8B0-A024DA6FD18C}
+		{93DDFB7B-E2BA-40F5-9143-FD57C72C86B4} = {678F2E99-4027-4A0C-A82D-6EE7270D43FE}
+		{7919C684-FEDE-4F2A-A681-C5DAFE0B3F69} = {92642C77-5979-454E-A289-10975293A705}
+		{4EAD6FE4-D9A5-4752-B465-0D8CF0B1D733} = {7919C684-FEDE-4F2A-A681-C5DAFE0B3F69}
+		{D357B997-E9F5-401F-A0CB-354486F7AA1E} = {F72B0F75-82F0-4279-BFC9-B8F578716D82}
+		{37E0643E-4CF3-4252-830F-9812FB92ECB3} = {EC34AD7E-430B-4FD2-BEC4-4CB5679DF139}
+		{B81DD61A-DA7B-43B2-8D50-0695A267159A} = {7BC57D63-D0B1-4686-ACB9-681750B06631}
+		{E71812B8-199C-4B8E-BD8E-8788704FE8AC} = {92642C77-5979-454E-A289-10975293A705}
+		{C530BF97-130E-4C27-A02B-028B157D0C91} = {E71812B8-199C-4B8E-BD8E-8788704FE8AC}
+		{36B342EF-7053-4CCB-B9E9-B0F7EB7781E6} = {64131A36-771B-42D8-83A5-477DF64085C4}
+		{AF529159-7E04-46E1-8E41-F66011E5BD83} = {CFC76E70-2C0F-42B6-B25E-D131DC9FF5C5}
+		{80ECD31F-7921-4B49-9519-718B63E4AF8D} = {AF529159-7E04-46E1-8E41-F66011E5BD83}
+		{71AE831A-5A2C-4C28-997F-04BDFB5C2058} = {9CF50C71-56EA-4B60-9D81-ED95602690DD}
+		{7E722201-99E3-4993-8E59-0751DF5993FC} = {7BC57D63-D0B1-4686-ACB9-681750B06631}
+		{795F1B8E-2A18-4A3C-B6BD-DF83A4F8E084} = {CFC76E70-2C0F-42B6-B25E-D131DC9FF5C5}
+		{15E1332D-5C6B-4E05-A4C6-8875530B61F4} = {CFC76E70-2C0F-42B6-B25E-D131DC9FF5C5}
+		{34DD430D-AC30-4231-99A1-9D6EE1AF6195} = {15E1332D-5C6B-4E05-A4C6-8875530B61F4}
+		{8F47B7E2-775C-41FC-8779-045D54923E83} = {7A2EFC80-C5C0-4392-9347-121751E3596E}
+		{290CCB16-3702-4DB1-B86C-B90B323308BF} = {795F1B8E-2A18-4A3C-B6BD-DF83A4F8E084}
+		{425868FE-077C-4805-8A50-734C923EAA6F} = {D0EC21ED-5B2D-4556-94CA-3FD5A985ADF2}
+		{C9F9BA40-D2A4-4AF1-AFA2-B9B0C47F37DE} = {9F7FBC80-96B3-457F-85E2-B32ED4BD5493}
+		{70E013E1-44A0-4188-AFE5-6B0EEE976DB9} = {CFC76E70-2C0F-42B6-B25E-D131DC9FF5C5}
+		{3D8ACB51-84BF-4C8A-8CB7-413E790ABE9C} = {70E013E1-44A0-4188-AFE5-6B0EEE976DB9}
+		{C46466D8-F1AA-496A-AA47-DCFDFEF641BE} = {B26B9DE2-8EA4-4198-B132-3AAC9EAF716C}
+		{FC90C086-5060-452E-A98F-363A8EEA4A19} = {9D0A6DD1-06FD-47F0-891B-2B8768FC0DEC}
+		{9CF50C71-56EA-4B60-9D81-ED95602690DD} = {AF529159-7E04-46E1-8E41-F66011E5BD83}
+		{D0EC21ED-5B2D-4556-94CA-3FD5A985ADF2} = {795F1B8E-2A18-4A3C-B6BD-DF83A4F8E084}
+		{7A2EFC80-C5C0-4392-9347-121751E3596E} = {15E1332D-5C6B-4E05-A4C6-8875530B61F4}
+		{9F7FBC80-96B3-457F-85E2-B32ED4BD5493} = {09747B7B-B781-4B46-B677-3641E9971C12}
+		{24A336A6-03AF-49CF-8E29-12999AAD88EA} = {A4611B58-AE8A-4E80-9A31-B363CD77D959}
+		{678F2E99-4027-4A0C-A82D-6EE7270D43FE} = {25DE6CCA-05FC-44D4-B8B0-A024DA6FD18C}
+		{F72B0F75-82F0-4279-BFC9-B8F578716D82} = {7919C684-FEDE-4F2A-A681-C5DAFE0B3F69}
+		{64131A36-771B-42D8-83A5-477DF64085C4} = {E71812B8-199C-4B8E-BD8E-8788704FE8AC}
+		{F401F0F0-8AB5-451B-A38A-D4FFF304FC0F} = {C46466D8-F1AA-496A-AA47-DCFDFEF641BE}
+		{2F8D1396-38FC-4BE7-9344-0F1988E8F2B5} = {9F7FBC80-96B3-457F-85E2-B32ED4BD5493}
+		{27CD1308-F891-4640-B480-09E5CAF457BD} = {24A336A6-03AF-49CF-8E29-12999AAD88EA}
+		{D780B051-1770-4E23-B744-C7FF77DE91F4} = {F72B0F75-82F0-4279-BFC9-B8F578716D82}
+		{141A4A40-8FAB-4454-8418-279EB0CF3F0E} = {64131A36-771B-42D8-83A5-477DF64085C4}
+		{D4F00EFC-35CC-4392-93D1-6E4C1FF55EE8} = {3195CC8A-12BB-4E54-9826-9EAF13871333}
+		{3195CC8A-12BB-4E54-9826-9EAF13871333} = {47EF40C7-B3AE-4DD0-B357-43E2C41E1CFA}
+		{7BC57D63-D0B1-4686-ACB9-681750B06631} = {47EF40C7-B3AE-4DD0-B357-43E2C41E1CFA}
+		{54DF3399-D56E-4D5C-9ADB-D3AC64A00A19} = {3195CC8A-12BB-4E54-9826-9EAF13871333}
+		{E194C996-8C6C-4B75-83CA-ECDCC912AC6F} = {D514F4BC-3915-4625-9AC6-B41F22BAC4BD}
+		{16BF98F1-537A-4596-B7FC-D54FE5C76FED} = {E194C996-8C6C-4B75-83CA-ECDCC912AC6F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5765E0B-1883-494F-865A-758E4B982AB1}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 32
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://paulonz.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Src\\Libs\\Encryption\\Nz.Libs.Encryption\\Nz.Libs.Encryption.csproj
+		SccProjectTopLevelParentUniqueName1 = Nz.Api.Auth.sln
+		SccProjectName1 = Src/Libs/Encryption/Nz.Libs.Encryption
+		SccLocalPath1 = Src\\Libs\\Encryption\\Nz.Libs.Encryption
+		SccProjectUniqueName2 = Src\\Libs\\Encryption\\Nz.Libs.Encryption.Impl.HashAlgorithm\\Nz.Libs.Encryption.Impl.HashAlgorithm.csproj
+		SccProjectTopLevelParentUniqueName2 = Nz.Api.Auth.sln
+		SccProjectName2 = Src/Libs/Encryption/Nz.Libs.Encryption.Impl.HashAlgorithm
+		SccLocalPath2 = Src\\Libs\\Encryption\\Nz.Libs.Encryption.Impl.HashAlgorithm
+		SccProjectUniqueName3 = Src\\Common\\Nz.Common.GeneralSettings\\Nz.Common.GeneralSettings.csproj
+		SccProjectTopLevelParentUniqueName3 = Nz.Api.Auth.sln
+		SccProjectName3 = Src/Common/Nz.Common.GeneralSettings
+		SccLocalPath3 = Src\\Common\\Nz.Common.GeneralSettings
+		SccProjectUniqueName4 = Src\\Common\\Nz.Common.GeneralSettings.Impl.Default\\Nz.Common.GeneralSettings.Impl.Default.csproj
+		SccProjectTopLevelParentUniqueName4 = Nz.Api.Auth.sln
+		SccProjectName4 = Src/Common/Nz.Common.GeneralSettings.Impl.Default
+		SccLocalPath4 = Src\\Common\\Nz.Common.GeneralSettings.Impl.Default
+		SccProjectUniqueName5 = Src\\Common\\Nz.Common.Helpers\\Nz.Common.Helpers.csproj
+		SccProjectTopLevelParentUniqueName5 = Nz.Api.Auth.sln
+		SccProjectName5 = Src/Common/Nz.Common.Helpers
+		SccLocalPath5 = Src\\Common\\Nz.Common.Helpers
+		SccProjectUniqueName6 = Src\\Core\\Model\\Nz.Core.Model\\Nz.Core.Model.csproj
+		SccProjectTopLevelParentUniqueName6 = Nz.Api.Auth.sln
+		SccProjectName6 = Src/Core/Model/Nz.Core.Model
+		SccLocalPath6 = Src\\Core\\Model\\Nz.Core.Model
+		SccProjectUniqueName7 = Src\\Core\\DatabaseContext\\Nz.Core.DatabaseContext\\Nz.Core.DatabaseContext.csproj
+		SccProjectTopLevelParentUniqueName7 = Nz.Api.Auth.sln
+		SccProjectName7 = Src/Core/DatabaseContext/Nz.Core.DatabaseContext
+		SccLocalPath7 = Src\\Core\\DatabaseContext\\Nz.Core.DatabaseContext
+		SccProjectUniqueName8 = Src\\Core\\UnitOfWork\\Nz.Core.UnitOfWork\\Nz.Core.UnitOfWork.csproj
+		SccProjectTopLevelParentUniqueName8 = Nz.Api.Auth.sln
+		SccProjectName8 = Src/Core/UnitOfWork/Nz.Core.UnitOfWork
+		SccLocalPath8 = Src\\Core\\UnitOfWork\\Nz.Core.UnitOfWork
+		SccProjectUniqueName9 = Src\\Core\\UnitOfWork\\Nz.Core.UnitOfWork.Impl.Postgresql\\Nz.Core.UnitOfWork.Impl.Postgresql.csproj
+		SccProjectTopLevelParentUniqueName9 = Nz.Api.Auth.sln
+		SccProjectName9 = Src/Core/UnitOfWork/Nz.Core.UnitOfWork.Impl.Postgresql
+		SccLocalPath9 = Src\\Core\\UnitOfWork\\Nz.Core.UnitOfWork.Impl.Postgresql
+		SccProjectUniqueName10 = Src\\Core\\Business\\Nz.Core.Business\\Nz.Core.Business.csproj
+		SccProjectTopLevelParentUniqueName10 = Nz.Api.Auth.sln
+		SccProjectName10 = Src/Core/Business/Nz.Core.Business
+		SccLocalPath10 = Src\\Core\\Business\\Nz.Core.Business
+		SccProjectUniqueName11 = Src\\Core\\Business\\Nz.Core.Business.Impl.Default\\Nz.Core.Business.Impl.Default.csproj
+		SccProjectTopLevelParentUniqueName11 = Nz.Api.Auth.sln
+		SccProjectName11 = Src/Core/Business/Nz.Core.Business.Impl.Default
+		SccLocalPath11 = Src\\Core\\Business\\Nz.Core.Business.Impl.Default
+		SccProjectUniqueName12 = Src\\Api\\Nz.Api.ViewModel\\Nz.Api.ViewModel.csproj
+		SccProjectTopLevelParentUniqueName12 = Nz.Api.Auth.sln
+		SccProjectName12 = Src/Api/Nz.Api.ViewModel
+		SccLocalPath12 = Src\\Api\\Nz.Api.ViewModel
+		SccProjectUniqueName13 = Src\\Core\\Service\\Nz.Core.Service\\Nz.Core.Service.csproj
+		SccProjectTopLevelParentUniqueName13 = Nz.Api.Auth.sln
+		SccProjectName13 = Src/Core/Service/Nz.Core.Service
+		SccLocalPath13 = Src\\Core\\Service\\Nz.Core.Service
+		SccProjectUniqueName14 = Src\\Core\\Service\\Nz.Core.Service.Impl.Default\\Nz.Core.Service.Impl.Default.csproj
+		SccProjectTopLevelParentUniqueName14 = Nz.Api.Auth.sln
+		SccProjectName14 = Src/Core/Service/Nz.Core.Service.Impl.Default
+		SccLocalPath14 = Src\\Core\\Service\\Nz.Core.Service.Impl.Default
+		SccProjectUniqueName15 = Src\\Libs\\Jwt\\Nz.Libs.Jwt.Settings\\Nz.Libs.Jwt.Settings.csproj
+		SccProjectTopLevelParentUniqueName15 = Nz.Api.Auth.sln
+		SccProjectName15 = Src/Libs/Jwt/Nz.Libs.Jwt.Settings
+		SccLocalPath15 = Src\\Libs\\Jwt\\Nz.Libs.Jwt.Settings
+		SccProjectUniqueName16 = Src\\Libs\\Jwt\\Nz.Libs.Jwt.Settings.Impl.Default\\Nz.Libs.Jwt.Settings.Impl.Default.csproj
+		SccProjectTopLevelParentUniqueName16 = Nz.Api.Auth.sln
+		SccProjectName16 = Src/Libs/Jwt/Nz.Libs.Jwt.Settings.Impl.Default
+		SccLocalPath16 = Src\\Libs\\Jwt\\Nz.Libs.Jwt.Settings.Impl.Default
+		SccProjectUniqueName17 = Src\\Api\\Nz.Api\\Nz.Api.csproj
+		SccProjectTopLevelParentUniqueName17 = Nz.Api.Auth.sln
+		SccProjectName17 = Src/Api/Nz.Api
+		SccLocalPath17 = Src\\Api\\Nz.Api
+		SccProjectUniqueName18 = Src\\Libs\\MessageTemplate\\Nz.Libs.MessageTemplate\\Nz.Libs.MessageTemplate.csproj
+		SccProjectTopLevelParentUniqueName18 = Nz.Api.Auth.sln
+		SccProjectName18 = Src/Libs/MessageTemplate/Nz.Libs.MessageTemplate
+		SccLocalPath18 = Src\\Libs\\MessageTemplate\\Nz.Libs.MessageTemplate
+		SccProjectUniqueName19 = Src\\Libs\\MessageTemplate\\Nz.Libs.MessageTemplate.Impl.MessageResource\\Nz.Libs.MessageTemplate.Impl.MessageResource.csproj
+		SccProjectTopLevelParentUniqueName19 = Nz.Api.Auth.sln
+		SccProjectName19 = Src/Libs/MessageTemplate/Nz.Libs.MessageTemplate.Impl.MessageResource
+		SccLocalPath19 = Src\\Libs\\MessageTemplate\\Nz.Libs.MessageTemplate.Impl.MessageResource
+		SccProjectUniqueName20 = Src\\Libs\\EmailSender\\Nz.Libs.EmailSender\\Nz.Libs.EmailSender.csproj
+		SccProjectTopLevelParentUniqueName20 = Nz.Api.Auth.sln
+		SccProjectName20 = Src/Libs/EmailSender/Nz.Libs.EmailSender
+		SccLocalPath20 = Src\\Libs\\EmailSender\\Nz.Libs.EmailSender
+		SccProjectUniqueName21 = Src\\Libs\\EmailSender\\Nz.Libs.EmailSender.Impl.Smtp\\Nz.Libs.EmailSender.Impl.Smtp.csproj
+		SccProjectTopLevelParentUniqueName21 = Nz.Api.Auth.sln
+		SccProjectName21 = Src/Libs/EmailSender/Nz.Libs.EmailSender.Impl.Smtp
+		SccLocalPath21 = Src\\Libs\\EmailSender\\Nz.Libs.EmailSender.Impl.Smtp
+		SccProjectUniqueName22 = Src\\Core\\Model\\Nz.Core.Model.Impl.Jwt\\Nz.Core.Model.Impl.Jwt.csproj
+		SccProjectTopLevelParentUniqueName22 = Nz.Api.Auth.sln
+		SccProjectName22 = Src/Core/Model/Nz.Core.Model.Impl.Jwt
+		SccLocalPath22 = Src\\Core\\Model\\Nz.Core.Model.Impl.Jwt
+		SccProjectUniqueName23 = Src\\Libs\\RestPagination\\Nz.Libs.RestPagination\\Nz.Libs.RestPagination.csproj
+		SccProjectTopLevelParentUniqueName23 = Nz.Api.Auth.sln
+		SccProjectName23 = Src/Libs/RestPagination/Nz.Libs.RestPagination
+		SccLocalPath23 = Src\\Libs\\RestPagination\\Nz.Libs.RestPagination
+		SccProjectUniqueName24 = Src\\Common\\Nz.Common.Helpers.Impl.Default\\Nz.Common.Helpers.Impl.Default.csproj
+		SccProjectTopLevelParentUniqueName24 = Nz.Api.Auth.sln
+		SccProjectName24 = Src/Common/Nz.Common.Helpers.Impl.Default
+		SccLocalPath24 = Src\\Common\\Nz.Common.Helpers.Impl.Default
+		SccProjectUniqueName25 = Src\\Core\\Model\\Nz.Core.Model.Impl.Auth\\Nz.Core.Model.Impl.Auth.csproj
+		SccProjectTopLevelParentUniqueName25 = Nz.Api.Auth.sln
+		SccProjectName25 = Src/Core/Model/Nz.Core.Model.Impl.Auth
+		SccLocalPath25 = Src\\Core\\Model\\Nz.Core.Model.Impl.Auth
+		SccProjectUniqueName26 = Src\\Core\\DatabaseContext\\Nz.Core.DatabaseContext.Impl.Auth\\Nz.Core.DatabaseContext.Impl.Auth.csproj
+		SccProjectTopLevelParentUniqueName26 = Nz.Api.Auth.sln
+		SccProjectName26 = Src/Core/DatabaseContext/Nz.Core.DatabaseContext.Impl.Auth
+		SccLocalPath26 = Src\\Core\\DatabaseContext\\Nz.Core.DatabaseContext.Impl.Auth
+		SccProjectUniqueName27 = Src\\Core\\Business\\Nz.Core.Business.Impl.Auth\\Nz.Core.Business.Impl.Auth.csproj
+		SccProjectTopLevelParentUniqueName27 = Nz.Api.Auth.sln
+		SccProjectName27 = Src/Core/Business/Nz.Core.Business.Impl.Auth
+		SccLocalPath27 = Src\\Core\\Business\\Nz.Core.Business.Impl.Auth
+		SccProjectUniqueName28 = Src\\Core\\Service\\Nz.Core.Service.Impl.Auth\\Nz.Core.Service.Impl.Auth.csproj
+		SccProjectTopLevelParentUniqueName28 = Nz.Api.Auth.sln
+		SccProjectName28 = Src/Core/Service/Nz.Core.Service.Impl.Auth
+		SccLocalPath28 = Src\\Core\\Service\\Nz.Core.Service.Impl.Auth
+		SccProjectUniqueName29 = Src\\Api\\Auth\\Nz.Api.ViewModel.Auth\\Nz.Api.ViewModel.Auth.csproj
+		SccProjectTopLevelParentUniqueName29 = Nz.Api.Auth.sln
+		SccProjectName29 = Src/Api/Auth/Nz.Api.ViewModel.Auth
+		SccLocalPath29 = Src\\Api\\Auth\\Nz.Api.ViewModel.Auth
+		SccProjectUniqueName30 = Src\\Api\\Auth\\Nz.Api.Auth\\Nz.Api.Auth.csproj
+		SccProjectTopLevelParentUniqueName30 = Nz.Api.Auth.sln
+		SccProjectName30 = Src/Api/Auth/Nz.Api.Auth
+		SccLocalPath30 = Src\\Api\\Auth\\Nz.Api.Auth
+		SccProjectUniqueName31 = Src\\Tests\\Nz.Tests.Auth\\Nz.Tests.Auth.csproj
+		SccProjectTopLevelParentUniqueName31 = Nz.Api.Auth.sln
+		SccProjectName31 = Src/Tests/Nz.Tests.Auth
+		SccLocalPath31 = Src\\Tests\\Nz.Tests.Auth
+	EndGlobalSection
+EndGlobal

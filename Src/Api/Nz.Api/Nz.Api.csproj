@@ -1,0 +1,105 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <ApplicationIcon>..\..\..\Resources\Nz.ico</ApplicationIcon>
+    <Authors>Paulo Eduardo Nazeazeno</Authors>
+    <Description>Template para projetos pessoais</Description>
+    <Copyright>Paulo Eduardo Nazeazeno @ 2020</Copyright>
+    <PackageIcon>Nz.ico</PackageIcon>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\..\Resources\Nz.snk</AssemblyOriginatorKeyFile>
+    <NeutralLanguage>en</NeutralLanguage>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <StartupObject></StartupObject>
+    <UserSecretsId>137a8406-1233-4eea-80c9-ae0e370b23bb</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;CA1716</NoWarn>
+    <DocumentationFile>bin\Debug\net5.0\Nz.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;CA1716</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\Resources\Nz.ico" Link="Nz.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Resources\Nz.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\..\Resources\Nz.snk" Link="Nz.snk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.0.4" />
+    <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Nz.Common.GeneralSettings.Impl.Default\Nz.Common.GeneralSettings.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Common\Nz.Common.GeneralSettings\Nz.Common.GeneralSettings.csproj" />
+    <ProjectReference Include="..\..\Common\Nz.Common.Helpers.Impl.Default\Nz.Common.Helpers.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Common\Nz.Common.Helpers\Nz.Common.Helpers.csproj" />
+    <ProjectReference Include="..\..\Core\Business\Nz.Core.Business.Impl.Default\Nz.Core.Business.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Core\Business\Nz.Core.Business\Nz.Core.Business.csproj" />
+    <ProjectReference Include="..\..\Core\Model\Nz.Core.Model.Impl.Jwt\Nz.Core.Model.Impl.Jwt.csproj" />
+    <ProjectReference Include="..\..\Core\Service\Nz.Core.Service.Impl.Default\Nz.Core.Service.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Core\Service\Nz.Core.Service\Nz.Core.Service.csproj" />
+    <ProjectReference Include="..\..\Core\UnitOfWork\Nz.Core.UnitOfWork.Impl.Postgresql\Nz.Core.UnitOfWork.Impl.Postgresql.csproj" />
+    <ProjectReference Include="..\..\Core\UnitOfWork\Nz.Core.UnitOfWork\Nz.Core.UnitOfWork.csproj" />
+    <ProjectReference Include="..\..\Libs\EmailSender\Nz.Libs.EmailSender.Impl.Smtp\Nz.Libs.EmailSender.Impl.Smtp.csproj" />
+    <ProjectReference Include="..\..\Libs\EmailSender\Nz.Libs.EmailSender\Nz.Libs.EmailSender.csproj" />
+    <ProjectReference Include="..\..\Libs\Encryption\Nz.Libs.Encryption.Impl.HashAlgorithm\Nz.Libs.Encryption.Impl.HashAlgorithm.csproj" />
+    <ProjectReference Include="..\..\Libs\Encryption\Nz.Libs.Encryption\Nz.Libs.Encryption.csproj" />
+    <ProjectReference Include="..\..\Libs\Jwt\Nz.Libs.Jwt.Settings.Impl.Default\Nz.Libs.Jwt.Settings.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Libs\Jwt\Nz.Libs.Jwt.Settings\Nz.Libs.Jwt.Settings.csproj" />
+    <ProjectReference Include="..\..\Libs\MessageTemplate\Nz.Libs.MessageTemplate.Impl.MessageResource\Nz.Libs.MessageTemplate.Impl.MessageResource.csproj" />
+    <ProjectReference Include="..\..\Libs\MessageTemplate\Nz.Libs.MessageTemplate\Nz.Libs.MessageTemplate.csproj" />
+    <ProjectReference Include="..\..\Libs\RestPagination\Nz.Libs.RestPagination\Nz.Libs.RestPagination.csproj" />
+    <ProjectReference Include="..\Nz.Api.ViewModel\Nz.Api.ViewModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Validations.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Validations.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Validations.pt.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Validations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Validations.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

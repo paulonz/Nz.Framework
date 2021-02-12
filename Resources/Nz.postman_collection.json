@@ -1,0 +1,1237 @@
+{
+	"info": {
+		"_postman_id": "0172a222-81b8-4343-9778-58f05bdf0e43",
+		"name": "Nz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth Service",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "SignIn",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.collectionVariables.set(\"Token\", jsonData.token);\r",
+											"pm.collectionVariables.set(\"RefreshToken\", jsonData.refreshToken);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/Auth/SignIn",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"Auth",
+										"SignIn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"\",\r\n    \"phone\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/Auth/Register",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"Auth",
+										"Register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ConfirmRegister",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"\",\r\n    \"confirmRegisterToken\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/Auth/ConfirmRegister",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"Auth",
+										"ConfirmRegister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ForgotPassword",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/Auth/ForgotPassword",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"Auth",
+										"ForgotPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ConfirmForgotPassword",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"\",\r\n    \"recoveryPasswordToken\": \"\",\r\n    \"newPassword\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/Auth/ConfirmForgotPassword",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"Auth",
+										"ConfirmForgotPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ChangePassword",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"\",\r\n    \"currentPassword\": \"\",\r\n    \"newPassword\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/Auth/ChangePassword",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"Auth",
+										"ChangePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RefreshToken",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.collectionVariables.set(\"Token\", jsonData.token);\r",
+											"pm.collectionVariables.set(\"RefreshToken\", jsonData.refreshToken);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"refreshToken\": \"{{RefreshToken}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/Auth/RefreshToken",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"Auth",
+										"RefreshToken"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Me",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/Me?include=userRoles",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"Me"
+									],
+									"query": [
+										{
+											"key": "include",
+											"value": "userRoles"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"phone\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/Me",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"Me"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ManageUsers",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/ManageUsers?where=id >= 1&include=userRoles&orderBy=firstName DESC",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageUsers"
+									],
+									"query": [
+										{
+											"key": "where",
+											"value": "id >= 1"
+										},
+										{
+											"key": "include",
+											"value": "userRoles"
+										},
+										{
+											"key": "orderBy",
+											"value": "firstName DESC"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/ManageUsers/1?include=userRoles",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageUsers",
+										"1"
+									],
+									"query": [
+										{
+											"key": "include",
+											"value": "userRoles"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"\",\r\n    \"phone\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/ManageUsers",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageUsers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"\",\r\n    \"phone\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/ManageUsers/1",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageUsers",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/ManageUsers/1",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageUsers",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Restore",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/ManageUsers/1/Restore",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageUsers",
+										"1",
+										"Restore"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Common",
+					"item": [
+						{
+							"name": "HealthCheck",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/HealthCheck",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"HealthCheck"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TypeDescriptor",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AuthUrl}}/1.0/TypeDescriptor/RoleType",
+									"host": [
+										"{{AuthUrl}}"
+									],
+									"path": [
+										"1.0",
+										"TypeDescriptor",
+										"RoleType"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Announcement Service",
+			"item": [
+				{
+					"name": "ManageAnnouncements",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements?where=id >= 1&orderBy=title DESC",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageAnnouncements"
+									],
+									"query": [
+										{
+											"key": "where",
+											"value": "id >= 1"
+										},
+										{
+											"key": "orderBy",
+											"value": "title DESC"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements/1",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageAnnouncements",
+										"1"
+									],
+									"query": [
+										{
+											"key": "include",
+											"value": "userRoles",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageAnnouncements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements/1",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageAnnouncements",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements/1",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageAnnouncements",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Restore",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements/1/Restore",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"ManageAnnouncements",
+										"1",
+										"Restore"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "MyAnnouncements",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements?where=id >= 1&orderBy=title DESC",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"MyAnnouncements"
+									],
+									"query": [
+										{
+											"key": "where",
+											"value": "id >= 1"
+										},
+										{
+											"key": "orderBy",
+											"value": "title DESC"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements/1",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"MyAnnouncements",
+										"1"
+									],
+									"query": [
+										{
+											"key": "include",
+											"value": "userRoles",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"MyAnnouncements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements/1",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"MyAnnouncements",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements/1",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"MyAnnouncements",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Restore",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{Token}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements/1/Restore",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"MyAnnouncements",
+										"1",
+										"Restore"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Common",
+					"item": [
+						{
+							"name": "HealthCheck",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/HealthCheck",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"HealthCheck"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TypeDescriptor",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{AnnouncementUrl}}/1.0/TypeDescriptor/RoleType",
+									"host": [
+										"{{AnnouncementUrl}}"
+									],
+									"path": [
+										"1.0",
+										"TypeDescriptor",
+										"RoleType"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AuthUrl",
+			"value": "https://localhost:5001"
+		},
+		{
+			"key": "AnnouncementUrl",
+			"value": "https://localhost:5002"
+		},
+		{
+			"key": "Token",
+			"value": ""
+		},
+		{
+			"key": "RefreshToken",
+			"value": ""
+		}
+	]
+}

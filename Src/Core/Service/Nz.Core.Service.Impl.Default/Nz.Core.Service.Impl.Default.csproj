@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <ApplicationIcon>..\..\..\..\Resources\Nz.ico</ApplicationIcon>
+    <Authors>Paulo Eduardo Nazeazeno</Authors>
+    <Description>Template para projetos pessoais</Description>
+    <Copyright>Paulo Eduardo Nazeazeno @ 2020</Copyright>
+    <PackageIcon>Nz.ico</PackageIcon>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\..\..\Resources\Nz.snk</AssemblyOriginatorKeyFile>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RootNamespace>Nz.Core.Service</RootNamespace>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\..\Resources\Nz.ico" Link="Nz.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Resources\Nz.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\..\..\Resources\Nz.snk" Link="Nz.snk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Nz.Common.GeneralSettings\Nz.Common.GeneralSettings.csproj" />
+    <ProjectReference Include="..\..\..\Libs\Encryption\Nz.Libs.Encryption\Nz.Libs.Encryption.csproj" />
+    <ProjectReference Include="..\..\..\Libs\Jwt\Nz.Libs.Jwt.Settings\Nz.Libs.Jwt.Settings.csproj" />
+    <ProjectReference Include="..\..\Business\Nz.Core.Business\Nz.Core.Business.csproj" />
+    <ProjectReference Include="..\..\DatabaseContext\Nz.Core.DatabaseContext\Nz.Core.DatabaseContext.csproj" />
+    <ProjectReference Include="..\Nz.Core.Service\Nz.Core.Service.csproj" />
+  </ItemGroup>
+
+</Project>
