@@ -1,4 +1,3 @@
-########## AMBEV ##############:
 ok - Logs (implementar ILogger)
 ok - aplicar swagger
 ok - healthcheck
@@ -24,7 +23,7 @@ ok - testes unitários
     ok - helpers - testes unitários
     ok - encryption - testes unitários
     ok - emailsender - testes unitários
-    - api - testes de integração
+    ok - api - testes de integração
         ok - auth
         ok - managerUsers
         ok - myAnnouncements
@@ -48,35 +47,3 @@ ok - api em microserviços
 
 readme git
 publicar git
-
-########## fase 01 ############:
-Montar protótipos:
-    ok inicial
-    ok resultado da pesquisa
-    detalhe do profissional
-    novo usuário
-    login (usar token api)
-    suporte
-    cadastro perfil (com opção para ocultar nos resultados de busca)
-Montar lógica das páginas de protótipo
-componente para gravar imagens
-          grava a imagem em um cdn (tamanho padrão)
-          gera thumbnails
-          retorna urls para as imagens
-SEO
-Google AdSense
-Google Analytics
-
-########## fase 02 ############:
-revisão e aprimoramento SEO
-
-########## fase 03 ############:
-Filtros avançados na página de resultado
-
-########## fase 03 ############:
-criar perfil de anunciante pagante
-gateway de pagamento
-destacar anúncios de pagantes (cor diferente e no inicio dos resultados, destaques da página inicial somente para pagantes)
-job para alterar assinatura on/off
-estatísticas de cada anúncio (views, clicks em links)
-extrato de pagametnos da assinatura
