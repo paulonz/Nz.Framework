@@ -28,10 +28,16 @@
 							],
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"raw": "{\r\n    \"email\": \"paulo.na@gmail.com\",\r\n    \"password\": \"1234567\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -67,7 +73,13 @@
 							],
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"\",\r\n    \"phone\": \"\"\r\n}",
@@ -106,7 +118,13 @@
 							],
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"email\": \"\",\r\n    \"confirmRegisterToken\": \"\"\r\n}",
@@ -145,7 +163,13 @@
 							],
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"email\": \"\"\r\n}",
@@ -184,7 +208,13 @@
 							],
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"email\": \"\",\r\n    \"recoveryPasswordToken\": \"\",\r\n    \"newPassword\": \"\"\r\n}",
@@ -233,7 +263,13 @@
 									]
 								},
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"email\": \"\",\r\n    \"currentPassword\": \"\",\r\n    \"newPassword\": \"\"\r\n}",
@@ -274,7 +310,13 @@
 							],
 							"request": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"refreshToken\": \"{{RefreshToken}}\"\r\n}",
@@ -317,7 +359,13 @@
 									]
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AuthUrl}}/1.0/Me?include=userRoles",
 									"host": [
@@ -351,7 +399,13 @@
 									]
 								},
 								"method": "PUT",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"phone\": \"\"\r\n}",
@@ -393,7 +447,13 @@
 									]
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AuthUrl}}/1.0/ManageUsers?where=id >= 1&include=userRoles&orderBy=firstName DESC",
 									"host": [
@@ -435,7 +495,13 @@
 									]
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AuthUrl}}/1.0/ManageUsers/1?include=userRoles",
 									"host": [
@@ -475,7 +541,13 @@
 									]
 								},
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"\",\r\n    \"phone\": \"\",\r\n    \"password\": \"\"\r\n}",
@@ -517,7 +589,13 @@
 									]
 								},
 								"method": "PUT",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"\",\r\n    \"phone\": \"\",\r\n    \"password\": \"\"\r\n}",
@@ -560,7 +638,13 @@
 									]
 								},
 								"method": "DELETE",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AuthUrl}}/1.0/ManageUsers/1",
 									"host": [
@@ -594,7 +678,13 @@
 									]
 								},
 								"method": "PUT",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AuthUrl}}/1.0/ManageUsers/1/Restore",
 									"host": [
@@ -622,7 +712,13 @@
 									"type": "noauth"
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AuthUrl}}/1.0/HealthCheck",
 									"host": [
@@ -650,7 +746,13 @@
 									]
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AuthUrl}}/1.0/TypeDescriptor/RoleType",
 									"host": [
@@ -689,7 +791,13 @@
 									]
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements?where=id >= 1&orderBy=title DESC",
 									"host": [
@@ -727,7 +835,13 @@
 									]
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements/1",
 									"host": [
@@ -768,7 +882,13 @@
 									]
 								},
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"title\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 0\r\n}",
@@ -810,7 +930,13 @@
 									]
 								},
 								"method": "PUT",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"title\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 0\r\n}",
@@ -853,7 +979,13 @@
 									]
 								},
 								"method": "DELETE",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements/1",
 									"host": [
@@ -887,7 +1019,13 @@
 									]
 								},
 								"method": "PUT",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/ManageAnnouncements/1/Restore",
 									"host": [
@@ -922,7 +1060,13 @@
 									]
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements?where=id >= 1&orderBy=title DESC",
 									"host": [
@@ -960,7 +1104,13 @@
 									]
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements/1",
 									"host": [
@@ -1001,7 +1151,13 @@
 									]
 								},
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"title\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 0\r\n}",
@@ -1043,7 +1199,13 @@
 									]
 								},
 								"method": "PUT",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"title\": \"\",\r\n    \"description\": \"\",\r\n    \"price\": 0\r\n}",
@@ -1086,7 +1248,13 @@
 									]
 								},
 								"method": "DELETE",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements/1",
 									"host": [
@@ -1120,7 +1288,13 @@
 									]
 								},
 								"method": "PUT",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/MyAnnouncements/1/Restore",
 									"host": [
@@ -1148,7 +1322,13 @@
 									"type": "noauth"
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/HealthCheck",
 									"host": [
@@ -1176,7 +1356,13 @@
 									]
 								},
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "{{Language}}",
+										"type": "text"
+									}
+								],
 								"url": {
 									"raw": "{{AnnouncementUrl}}/1.0/TypeDescriptor/RoleType",
 									"host": [
@@ -1232,6 +1418,10 @@
 		{
 			"key": "RefreshToken",
 			"value": ""
+		},
+		{
+			"key": "Language",
+			"value": "pt"
 		}
 	]
 }

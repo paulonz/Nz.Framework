@@ -42,6 +42,14 @@ Start by configuring access to the database. These settings are defined in two p
 In the environment variables are also other configurations, such as the JWT Token and the SMTP service
 ## Project structure
 Descrever as camadas e responsabilidades de cada uma. Descrever os padrões adotados SOLID, DI, UnitOfWork
+
+
+
+
+
+
+
+
 ## Microservices
 No projeto já existem dois micro serviços: Auth e Announcement. Todo micro serviço deve fazer referência a Nz.Api, nela estão as implementações base e também definições do comportamento padrão da API e seus endpoints.
 Cada microserviço possui sua implementação para API, ViewModel, Service, Bussiness e Model.
