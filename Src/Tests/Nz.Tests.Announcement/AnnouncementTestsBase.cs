@@ -26,12 +26,12 @@ namespace Nz.Tests.Announcements
         /// <summary>
         /// Token de autenticação sem roles
         /// </summary>
-        protected static string NoRoleToken => "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIyIiwiZ2l2ZW5fbmFtZSI6IlBhdWxvIEUuIiwiZmFtaWx5X25hbWUiOiJOYXplYXplbm8iLCJlbWFpbCI6InBhdWxvLm5hQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL21vYmlsZXBob25lIjoiKzU1NDg5ODg0MTE3MDciLCJJc0VtYWlsVmFsaWRhdGVkIjoiVHJ1ZSIsIm5iZiI6MTYxMjgxMjc3NSwiZXhwIjoxOTI4MTcyNzc1LCJpYXQiOjE5MjgxNzI3NzUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3QifQ.xUfI8E3JAS5pWTn7nRL85s9DCEFU9dGpoXxXHyG2F00";
+        protected static string NoRoleToken => "xxxx";
 
         /// <summary>
         /// Token de autenticação com a role ManageAnnouncements
         /// </summary>
-        protected static string ManageAnnouncementsToken => "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIyIiwiZ2l2ZW5fbmFtZSI6IlBhdWxvIEUuIiwiZmFtaWx5X25hbWUiOiJOYXplYXplbm8iLCJlbWFpbCI6InBhdWxvLm5hQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL21vYmlsZXBob25lIjoiKzU1NDg5ODg0MTE3MDciLCJJc0VtYWlsVmFsaWRhdGVkIjoiVHJ1ZSIsInJvbGUiOiJNYW5hZ2VBbm5vdW5jZW1lbnRzIiwibmJmIjoxNjEyODEyNTI5LCJleHAiOjE5MjgxNzI1MjksImlhdCI6MTkyODE3MjUyOSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3QiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdCJ9.fODooWY3j0x0Vjfi0g7ro3sLhk-4W_JvnwWE0vAZ82c";
+        protected static string ManageAnnouncementsToken => "xxxx";
 
         /// <summary>
         /// Construtor padrão

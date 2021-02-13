@@ -20,7 +20,6 @@ namespace Nz.Api.Extensions
     using Nz.Core.UnitOfWork.Impl.Postgresql;
     using Nz.Libs.EmailSender;
     using Nz.Libs.EmailSender.Impl.Smtp;
-    using Nz.Libs.EmailSender.Impl.Smtp.Settings.Default;
     using Nz.Libs.Encryption;
     using Nz.Libs.Encryption.Impl.HashAlgorithm;
     using Nz.Libs.Jwt.Settings;

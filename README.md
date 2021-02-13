@@ -1,4 +1,5 @@
-﻿# Nz.Framework
+﻿
+# Nz.Framework
 Todo projeto Web começa igual, definição das camadas, responsabilidades, banco de dados, autenticação, autorização, etc. Este projeto serve como um guia, até mesmo um template para projetos Web escritos em .net.
 
 Every web project starts the same, definition of layers, responsibilities, database, authentication, authorization, etc. This project serves as a guide, even a template for Web projects written in .NET.
@@ -41,15 +42,89 @@ Start by configuring access to the database. These settings are defined in two p
 * In integration tests, in the base classes, within the BuildEnvironmentVariables method
 In the environment variables are also other configurations, such as the JWT Token and the SMTP service
 ## Project structure
-Descrever as camadas e responsabilidades de cada uma. Descrever os padrões adotados SOLID, DI, UnitOfWork
+Este projeto é composto por Helpers, Libs, Core e Api. Abaixo uma breve descrição sobre cada uma dessas camadas:
 
+This project is composed of Helpers, Libs, Core and Api. Below is a brief description of each of these layers:
+### Helpers
+Algumas ações são comuns dentro de um projeto, como criptografar/descriptografar, serializar/deserializar objetos, entre outras. A camada Helpers possui uma coleção de objetos e métodos de uso comum em uma aplicação. Suas definições estão no projeto **Nz.Common.Helpers** e suas implementações padrão estão no projeto **Nz.Common.Helpers.Impl.Default**. Os helpers disponíveis são:
 
+Some actions are common within a project, such as encrypting / decrypting, serializing / deserializing objects, among others. The Helpers layer has a collection of objects and methods commonly used in an application. Its definitions are in the **Nz.Common.Helpers** project and its default implementations are in the **Nz.Common.Helpers.Impl.Default** project. The available helpers are:
+```csharp
+public interface IResourceHelper
+{
+	string LookupResource(
+		Type resourceType,
+		string resourceKey);
+}
+```
+```csharp
+public interface IParserHelper
+{
+	string ToJson<T>(
+		T model) where T : class;
 
+	T FromJson<T>(
+		string json) where T : class;
 
+	Target To<Target, From>(From model)
+		where Target : class
+		where From : class;
+}
+```
+```csharp
+public interface IEnumHelpers
+{
+	string GetDisplay<T>(
+		T source,
+		System.Resources.ResourceManager resourceManager) where T : Enum;
+}
+```
+### Libs
+Outras ações ou objetos comuns em uma aplicação estão na camada Libs. Nesta camada estão implementações mais complexas, como por exemplo: envio de email, templates para mensagens, paginação de resultados, entre outros. Algumas libs possuem configurações, essas configurações são definidas pelas interfaces I{libName}Settings.
+As libs disponíveis e suas implementações são:
 
+Other common actions or objects in an application are in the Libs layer. In this layer are more complex implementations, such as: sending emails, templates for messages, paging results, among others. Some libs have settings, these settings are defined by the I {libName} Settings interfaces.
+The available libs and their implementations are:
+| Definição (Definition) | Implementação (Implementation) |
+|--|--|
+| Nz.Libs.Encryption.IEncryption | Nz.Libs.Encryption.Impl.HashAlgorithm.Encryption |
+| Nz.Libs.Encryption.IEncryptionSettings | Nz.Libs.Encryption.Impl.HashAlgorithm.EncryptionSettings |
+| Nz.Libs.Jwt.Settings.IJwtSettings | Nz.Libs.Jwt.Settings.Impl.Default.JwtSettings |
+| Nz.Libs.EmailSender.IEmailSender | Nz.Libs.EmailSender.Impl.Smtp.EmailSender |
+| Nz.Libs.EmailSender.IEmailSenderSettings | Nz.Libs.EmailSender.Impl.Smtp.EmailSenderSettings |
+| Nz.Libs.MessageTemplate.IMessageTemplate | Nz.Libs.MessageTemplate.Impl.MessageResource.MessageTemplate |
+|  | Nz.Libs.MessageTemplate.MessageTemplateType |
+|  | Nz.Libs.RestPagination.EnablePagingAttribute |
+### Core
+No core fica a real lógica da aplicação, suas regras de negócio além do acesso e manipulação de dados. O core é dividido em 5 camadas:
 
+At the core is the real logic of the application, its business rules as well as data access and manipulation. The core is divided into 5 layers:
+#### Model
+A camada model possui a implementação dos objetos que são armazenados no banco de dados. Existe um projeto base (**Nz.Core.Model**) que possui as definições padrão para um objeto do tipo model. Para cada micro serviço criado existe uma implementação de model isolada em outro projeto, somente com os objetos utilizados pelo micro serviço.
 
+The model layer has the implementation of the objects that are stored in the database. There is a base project (**Nz.Core.Model**) that has the default settings for an object of type model. For each micro service created there is an isolated model implementation in another project, with only the objects used by the micro service.
+#### DatabaseContext
+DatabaseContext é o mapeamento dos objetos model para o banco de dados, nele é definido o banco de dados que deve ser utilizado, assim como regras específicas de índices, padrão de nomes para tabelas e colunas. Para cada micro serviço existe uma implementação de DatabaseContext, com suas configurações e o mapeamento para as models utilizadas pelo micro serviço.
 
+DatabaseContext is the mapping of model objects to the database, it defines the database to be used, as well as specific index rules, standard names for tables and columns. For each micro service there is an implementation of DatabaseContext, with its settings and the mapping for the models used by the micro service.
+#### UnitOfWork
+Esta camada faz a manipulação dos dados usados pela aplicação, ela faz uso das camadas model e databaseContext. A definição de IUnitOfWork provê a leitura, escrita e alteração de dados. A implementação padrão faz uso do pacote [Microsoft.EntityFrameworkCore.Relational](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Relational). 
+
+This layer manipulates the data used by the application, it makes use of the model and databaseContext layers. The definition of IUnitOfWork provides for reading, writing and changing data. The standard implementation makes use of the [Microsoft.EntityFrameworkCore.Relational](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Relational) package.
+#### Business
+Na business são feitas as validações de regras relacionadas ao objeto sendo manipulado. Existe um projeto base **Nz.Core.Business** com as definições de comportamento padrão para a camada, essa implementação está no projeto **Nz.Core.Business.Impl.Default**. Cada micro serviço possui sua definição e implementação dessa camada, tratando apenas objetos que fazem parte do micro serviço.
+
+In business, validations of rules related to the object being manipulated are carried out. There is a ** Nz.Core.Business ** base project with the default behavior definitions for the layer, this implementation is in the ** Nz.Core.Business.Impl.Default ** project. Each micro service has its definition and implementation of this layer, treating only objects that are part of the micro service.
+#### Service
+A camada de serviço é responsável por receber os dados originários da api, fazer conversão de tipo (quando necessário) e encaminhar para a business responsável. A service também é responsável por controlar transações com o banco de dados, isso é feito utilizando o objeto databaseContext, esse contexto é iniciado na camada service e o commit da transação também é feito por ela.
+
+The service layer is responsible for receiving data originating from the api, making type conversion (when necessary) and forwarding it to the responsible business. The service is also responsible for controlling transactions with the database, this is done using the databaseContext object, this context is initiated in the service layer and the transaction is also committed by it.
+### API
+A API é a porta de entrada para a lógica da aplicação. Outras aplicações (como web ou mobile) fazem suas requisições para a API, o processamento é feito e o resultado entregue. A camada API desta solução foi desenvolvida usando a abordagem Restful, desta forma, todo IO é feito com base em objetos Json. As respostas dadas pela API utilizam o http status para indicar o tipo de resultado, a lista de status http pode ser consultada [aqui](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status).
+Esta camada foi organizada em micro serviços, para saber mais sobre essa organização leia o tópico **Microservices** neste arquivo.
+
+The API is the gateway to application logic. Other applications (such as web or mobile) make their requests for the API, processing is done and the result is delivered. The API layer of this solution was developed using the Restful approach, in this way, all IO is done based on Json objects. The responses given by the API use the http status to indicate the type of result, the http status list can be consulted [here](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status).
+This layer was organized in micro services, to learn more about this organization read the topic ** Microservices ** in this file.
 ## Microservices
 No projeto já existem dois micro serviços: Auth e Announcement. Todo micro serviço deve fazer referência a Nz.Api, nela estão as implementações base e também definições do comportamento padrão da API e seus endpoints.
 Cada microserviço possui sua implementação para API, ViewModel, Service, Bussiness e Model.
@@ -255,7 +330,7 @@ private Action<ILoggingBuilder> CreateLoggerSettings()
 }
 ```
 ### Defaults
-**DateTime** 
+**DateTime**
 por padrão, as datas são armazenadas e recuperadas em UTC.
 by default, dates are stored and retrieved in UTC.
 **Logger** 

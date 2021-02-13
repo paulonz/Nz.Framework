@@ -4,7 +4,7 @@
  * https://github.com/paulonz/Nz.Framework
  */
 
-namespace Nz.Libs.EmailSender.Impl.Smtp.Settings.Default
+namespace Nz.Libs.EmailSender.Impl.Smtp
 {
     using System;
     using Microsoft.Extensions.Logging;
