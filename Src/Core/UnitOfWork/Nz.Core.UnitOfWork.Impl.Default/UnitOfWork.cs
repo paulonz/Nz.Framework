@@ -4,7 +4,7 @@
  * https://github.com/paulonz/Nz.Framework
  */
 
-namespace Nz.Core.UnitOfWork.Impl.Postgresql
+namespace Nz.Core.UnitOfWork.Impl.Default
 {
     using System;
     using System.Linq;

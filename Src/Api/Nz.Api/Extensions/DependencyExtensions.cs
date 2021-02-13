@@ -17,7 +17,7 @@ namespace Nz.Api.Extensions
     using Nz.Core.Service;
     using Nz.Core.Service.Impl.Default;
     using Nz.Core.UnitOfWork;
-    using Nz.Core.UnitOfWork.Impl.Postgresql;
+    using Nz.Core.UnitOfWork.Impl.Default;
     using Nz.Libs.EmailSender;
     using Nz.Libs.EmailSender.Impl.Smtp;
     using Nz.Libs.Encryption;

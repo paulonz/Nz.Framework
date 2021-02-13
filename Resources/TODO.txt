@@ -1,3 +1,5 @@
+alterar package Newtonsoft.Json para System.Text.Json
+
 ok - Logs (implementar ILogger)
 ok - aplicar swagger
 ok - healthcheck
@@ -45,5 +47,5 @@ ok - api em microserviços
     ok - separar projetos de testes, uma assembly pra cada (base, auth e announcement)
     ok - criar uma solution para cada api (geral, auth e announcement)
 
-readme git
-publicar git
+ok - readme git
+ok - publicar git
