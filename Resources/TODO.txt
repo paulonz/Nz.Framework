@@ -1,0 +1,49 @@
+ok - Logs (implementar ILogger)
+ok - aplicar swagger
+ok - healthcheck
+ok - DatabaseContext.Impl verificar como carregar a string de conexão sem deixar fixo no código (para criação de migration)
+ok - utilizar ILogger para registrar criação, alteração e exclusão de registros (scoped? verificar se é possível iniciar um scope na controller e ele viver até o final da requisição)
+ok - implementar auto migration do banco de dados
+ok - revisar referencias entre projetos
+ok - atualizar versão framework e nuget
+ok - revisar summary de todos métodos, conferir returns
+ok - revisar código duplicado
+ok - suporte a docker
+ok - log ao subir e ao encerrar aplicação
+ok - versionamento de url para endpoints
+ok - atualizar postman com todos os endpoints
+ok - incluir arquivo postman em resources
+ok - criar uma interface para cada service e business, extender interfaces base, a implementação também ser uma por interface e extender base
+ok - incluir resources com o idioma en
+ok - traduzir valores nos resources .en
+ok - validar globalization nas requisições api
+ok - alterar resource padrão para en
+
+ok - testes unitários
+    ok - helpers - testes unitários
+    ok - encryption - testes unitários
+    ok - emailsender - testes unitários
+    ok - api - testes de integração
+        ok - auth
+        ok - managerUsers
+        ok - myAnnouncements
+    ok - criar uma assembly de helpers para os testes de integração
+    ok - incluir classe helpers
+    ok - incluir classe base (receber alguns dados no construtor)
+    ok - verificar como cenários BDD são escritos, escrever no summary dos métodos de teste
+
+ok - api em microserviços
+    ok - separar auth (registrar, autenticar)
+    ok - criar em auth o endpoint /me com get e put
+    ok - microserviço para crud de anuncio
+        ok - deve autenticar, usar injeção jwt, verificar para agrupar métodos na lib
+        ok - um endpoint para manipular anúncios do usuário autenticado
+        ok - outro endpoint para crud de anúncio, apenas para usuário administrador
+        ok - validar no postman
+    ok - bancos de dados separados (um para auth e outro para anuncio)
+    ok - melhorar program e startup, tentar usar o máximo da apiBase
+    ok - separar projetos de testes, uma assembly pra cada (base, auth e announcement)
+    ok - criar uma solution para cada api (geral, auth e announcement)
+
+readme git
+publicar git

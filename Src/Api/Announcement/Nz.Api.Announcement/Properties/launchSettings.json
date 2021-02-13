@@ -1,0 +1,40 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:56873",
+      "sslPort": 44394
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Nz.Api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "JWT_VALID_ISSUER": "https://localhost",
+        "EMAIL_SMTP_HOST": "smtp.mailtrap.io",
+        "JWT_SIGNING_KEY": "xxxx",
+        "GENERAL_BASE_URI": "https://localhost/",
+        "EMAIL_SMTP_PASSWORD": "xxxx",
+        "DATABASE_CONNECTION_STRING": "Server=127.0.0.1;Port=5433;Database=nz_announcement;User Id=nz_user_announcement;Password=xxxx;",
+        "JWT_VALID_AUDIENCE": "https://localhost",
+        "EMAIL_FROM_EMAIL": "api@nz.com",
+        "EMAIL_SMTP_USER": "xxxx",
+        "EMAIL_FROM_NAME": "NzAPI",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "JWT_EXPIRES_IN_MINUTES": "60",
+        "EMAIL_SMTP_PORT": "465"
+      },
+      "applicationUrl": "https://localhost:5002"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}

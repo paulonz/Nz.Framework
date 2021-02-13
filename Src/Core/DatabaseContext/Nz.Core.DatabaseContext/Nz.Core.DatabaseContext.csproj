@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <ApplicationIcon>..\..\..\..\Resources\Nz.ico</ApplicationIcon>
+    <Authors>Paulo Eduardo Nazeazeno</Authors>
+    <Description>Template para projetos pessoais</Description>
+    <Copyright>Paulo Eduardo Nazeazeno @ 2020</Copyright>
+    <PackageIcon>Nz.ico</PackageIcon>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\..\..\Resources\Nz.snk</AssemblyOriginatorKeyFile>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RootNamespace>Nz.Core.DatabaseContext</RootNamespace>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\..\Resources\Nz.ico" Link="Nz.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Resources\Nz.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\..\..\Resources\Nz.snk" Link="Nz.snk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+  </ItemGroup>
+
+</Project>

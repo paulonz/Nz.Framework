@@ -1,0 +1,100 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <ApplicationIcon>..\..\..\Resources\Nz.ico</ApplicationIcon>
+    <Authors>Paulo Eduardo Nazeazeno</Authors>
+    <Description>Template para projetos pessoais</Description>
+    <Copyright>Paulo Eduardo Nazeazeno @ 2020</Copyright>
+    <PackageIcon>Nz.ico</PackageIcon>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\..\Resources\Nz.snk</AssemblyOriginatorKeyFile>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RootNamespace>Nz.Tests.Components</RootNamespace>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\Resources\Nz.ico" Link="Nz.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Resources\Nz.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\..\Resources\Nz.snk" Link="Nz.snk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Nz.Common.GeneralSettings.Impl.Default\Nz.Common.GeneralSettings.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Common\Nz.Common.GeneralSettings\Nz.Common.GeneralSettings.csproj" />
+    <ProjectReference Include="..\..\Common\Nz.Common.Helpers.Impl.Default\Nz.Common.Helpers.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Common\Nz.Common.Helpers\Nz.Common.Helpers.csproj" />
+    <ProjectReference Include="..\..\Core\Business\Nz.Core.Business.Impl.Default\Nz.Core.Business.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Core\Business\Nz.Core.Business\Nz.Core.Business.csproj" />
+    <ProjectReference Include="..\..\Core\DatabaseContext\Nz.Core.DatabaseContext\Nz.Core.DatabaseContext.csproj" />
+    <ProjectReference Include="..\..\Core\Model\Nz.Core.Model.Impl.Jwt\Nz.Core.Model.Impl.Jwt.csproj" />
+    <ProjectReference Include="..\..\Core\Model\Nz.Core.Model\Nz.Core.Model.csproj" />
+    <ProjectReference Include="..\..\Core\Service\Nz.Core.Service.Impl.Default\Nz.Core.Service.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Core\Service\Nz.Core.Service\Nz.Core.Service.csproj" />
+    <ProjectReference Include="..\..\Core\UnitOfWork\Nz.Core.UnitOfWork.Impl.Postgresql\Nz.Core.UnitOfWork.Impl.Postgresql.csproj" />
+    <ProjectReference Include="..\..\Core\UnitOfWork\Nz.Core.UnitOfWork\Nz.Core.UnitOfWork.csproj" />
+    <ProjectReference Include="..\..\Libs\EmailSender\Nz.Libs.EmailSender.Impl.Smtp\Nz.Libs.EmailSender.Impl.Smtp.csproj" />
+    <ProjectReference Include="..\..\Libs\EmailSender\Nz.Libs.EmailSender\Nz.Libs.EmailSender.csproj" />
+    <ProjectReference Include="..\..\Libs\Encryption\Nz.Libs.Encryption.Impl.HashAlgorithm\Nz.Libs.Encryption.Impl.HashAlgorithm.csproj" />
+    <ProjectReference Include="..\..\Libs\Encryption\Nz.Libs.Encryption\Nz.Libs.Encryption.csproj" />
+    <ProjectReference Include="..\..\Libs\Jwt\Nz.Libs.Jwt.Settings.Impl.Default\Nz.Libs.Jwt.Settings.Impl.Default.csproj" />
+    <ProjectReference Include="..\..\Libs\Jwt\Nz.Libs.Jwt.Settings\Nz.Libs.Jwt.Settings.csproj" />
+    <ProjectReference Include="..\..\Libs\MessageTemplate\Nz.Libs.MessageTemplate.Impl.MessageResource\Nz.Libs.MessageTemplate.Impl.MessageResource.csproj" />
+    <ProjectReference Include="..\..\Libs\MessageTemplate\Nz.Libs.MessageTemplate\Nz.Libs.MessageTemplate.csproj" />
+    <ProjectReference Include="..\..\Libs\RestPagination\Nz.Libs.RestPagination\Nz.Libs.RestPagination.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Backend\Common\Empty.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Empty.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Backend\Common\Strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Backend\Common\Empty.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Empty.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Backend\Common\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
