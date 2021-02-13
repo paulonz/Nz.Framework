@@ -70,7 +70,7 @@
     <ProjectReference Include="..\..\Core\Model\Nz.Core.Model.Impl.Jwt\Nz.Core.Model.Impl.Jwt.csproj" />
     <ProjectReference Include="..\..\Core\Service\Nz.Core.Service.Impl.Default\Nz.Core.Service.Impl.Default.csproj" />
     <ProjectReference Include="..\..\Core\Service\Nz.Core.Service\Nz.Core.Service.csproj" />
-    <ProjectReference Include="..\..\Core\UnitOfWork\Nz.Core.UnitOfWork.Impl.Postgresql\Nz.Core.UnitOfWork.Impl.Postgresql.csproj" />
+    <ProjectReference Include="..\..\Core\UnitOfWork\Nz.Core.UnitOfWork.Impl.Default\Nz.Core.UnitOfWork.Impl.Default.csproj" />
     <ProjectReference Include="..\..\Core\UnitOfWork\Nz.Core.UnitOfWork\Nz.Core.UnitOfWork.csproj" />
     <ProjectReference Include="..\..\Libs\EmailSender\Nz.Libs.EmailSender.Impl.Smtp\Nz.Libs.EmailSender.Impl.Smtp.csproj" />
     <ProjectReference Include="..\..\Libs\EmailSender\Nz.Libs.EmailSender\Nz.Libs.EmailSender.csproj" />

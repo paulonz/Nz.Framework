@@ -18,7 +18,7 @@
     <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>..\..\..\..\Resources\Nz.snk</AssemblyOriginatorKeyFile>
     <NeutralLanguage>en</NeutralLanguage>
-    <RootNamespace>Nz.Core.UnitOfWork.Impl.Postgresql</RootNamespace>
+    <RootNamespace>Nz.Core.UnitOfWork.Impl.Default</RootNamespace>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
